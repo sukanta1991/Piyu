@@ -1,0 +1,16 @@
+int[][] rotate(int[][] input){
+int n = input.length();
+int m = input[0].length();
+int [][] output = new int[m][n];
+
+for(int i=0;i<n;i++)
+{
+ for(int j=0;j<m;j++)
+  {
+  output[j][n-1-i] = input[i][j];// this is to rotate the array to the right
+  output[j][n-1-i] = input[n-1-i][m-1-j];// this is to rotate the array to the left
+  }
+}
+
+return output;
+}
